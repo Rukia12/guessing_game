@@ -1,10 +1,25 @@
-  'use strict';
+'use strict';
+
+askName();
+question1();
+question2();
+question3();
+question4();
+question5();
+question6();
+question7();
+finalScore();
+
+var score = 0;
+
+function askName() {
   var userName = prompt('Who are you?');
   console.log('User: ' + userName);
   alert('Sup ' + userName + '. Let\'s see how much you can guess about me.');
-  var score = 0;
+}
 
 //question 1
+function question1() {
   console.log('question one');
   var questionOne = prompt('Would I rather be using Windows?').toLowerCase();
   if (questionOne === 'yes' || questionOne === 'y' || questionOne === 'yeah' || questionOne === 'yup' || questionOne === 'yep' ) {
@@ -12,14 +27,16 @@
     ++score;
     console.log('Correct answers: ' + score);
   }
-  else if (questionOne === 'no' || questionOne === 'n' || questionOne === 'nope' || questionTwo === 'na' || questionTwo === 'nah') {
+  else if (questionOne === 'no' || questionOne === 'n' || questionOne === 'nope' || questionOne === 'na' || questionOne === 'nah') {
     alert('i die');
   }
   else {
     alert('I am dissapoint');
   }
+}
 
 //question 2
+function question2() {
   console.log('question two');
   var questionTwo = prompt('Do I have any pets?').toLowerCase();
   if (questionTwo === 'yes' || questionTwo === 'y' || questionTwo === 'yeah' || questionTwo === 'yup' || questionTwo === 'yep' ) {
@@ -33,8 +50,10 @@
   else {
     alert('u silly');
   }
+}
 
 //question 3
+function question3() {
   console.log('question three');
   var questionThree = prompt('Do I hate the cold?').toLowerCase();
   if (questionThree === 'yes' || questionThree === 'y' || questionThree === 'yeah' || questionThree === 'yup' || questionThree === 'yep' ) {
@@ -48,8 +67,10 @@
   else {
     alert('like r u even trying');
   }
+}
 
 //question 4
+function question4() {
   console.log('question four');
   var questionFour = prompt('What season was I born in?').toLowerCase();
   if (questionFour === 'summer' || questionFour === 'sumer' || questionFour === 'baseball') {
@@ -65,8 +86,10 @@
   else {
     alert('wat r u even saying');
   }
+}
 
 //question 5
+function question5() {
   console.log('question five');
   var questionFive = prompt('Which of these places have I NOT lived?\n\nCalifornia\nLouisiana\nFlorida\nIndia\nConnecticut').toLowerCase();
   if (questionFive === 'california' || questionFive === 'ca' || questionFive === 'cali' || questionFive === 'florida' || questionFive === 'fl' || questionFive === 'india' || questionFive === 'connecticut' || questionFive === 'ct' ) {
@@ -80,8 +103,10 @@
   else {
     alert('can u not spell or');
   }
+}
 
 //question 6
+function question6() {
   console.log('question six');
   var questionSix = prompt('What is a kind of music that I regularly listen to?').toLowerCase();
   var sixArray = ['alternative', 'classic rock', 'hip-hop', 'rap', 'jazz', 'rock', 'pop', 'pop punk', 'top 40', 'contemporary'];
@@ -93,8 +118,10 @@
   else if (sixArray.indexOf(questionSix) < 0) {
     alert('I enjoy most types of music! But the ones I listen to most regularly are [classic or other] rock, hip-hop, jazz, and contemporary.');
   }
+}
 
 //question 7
+function question7() {
   console.log('question seven');
   var tries = 0;
   while (tries < 10) {
@@ -131,6 +158,9 @@
   if (tries > 9) {
     alert('Sorry! You ran out of tries. The answer is 12!');
   }
+}
 
 // FINAL SCORE
+function finalScore() {
   alert('Your score is ' + score + ' out of 7, ' + userName + '. Hooray for you!');
+}
